@@ -24,9 +24,7 @@ eureka:
     eviction-interval-timer-in-ms: 10000
 
 spring:
-  profiles: dev #开发环境
-    application:
-      name: microservice-cofig-eureka-client
+  profiles: dev #开发环境 
   devtools:
     livereload:
       port: 35731
@@ -34,6 +32,8 @@ spring:
       restart:
         enabled: false
     add-properties: true
+  application:
+    name: microservice-cofig-eureka-client
 
 ---
 server:
@@ -56,8 +56,8 @@ eureka:
 
 spring:
   profiles: test #测试环境
-    application:
-      name: microservice-cofig-eureka-client
+  application:
+    name: microservice-cofig-eureka-client
   devtools:
     livereload:
       port: 35731
