@@ -1,7 +1,7 @@
-spring:
+﻿spring:
   profiles:
     active:
-      - dev
+      -dev
 
 ---
 server:
@@ -10,20 +10,24 @@ spring:
   profiles: dev #开发环境
   application:
     name: microservice-cofig-client-myblog-dev
+
 eureka:
   client:
     service-url:
       defaultZone: http://eureka-dev.com:7001/eureka/
 
 ---
+
 server:
   port: 8202
 spring:
-  profiles: test  #测试环境
+  profiles: test #测试环境
   application:
     name: microservice-cofig-client-myblog-test
+
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-test.com:7001/eureka/
+      defaultZone: http://eureka-dev.com:7001/eureka/
+
 #请保存为UTF-8格式
